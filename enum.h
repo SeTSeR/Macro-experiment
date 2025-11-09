@@ -15,7 +15,7 @@
   } NAME
 
 #define ENUM_TO_STR(NAME, ...)			\
-  const char *NAME_##to_str(NAME value) {	\
+  const char *NAME##_to_str(NAME value) {	\
     switch (value) {				\
       FOREACH(CASE, __VA_ARGS__)		\
 	}					\
