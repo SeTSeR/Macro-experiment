@@ -1,6 +1,3 @@
-#ifndef __VARARGS_H__
-#define __VARARGS_H__
-
 #include "control.h"
 #include "eval.h"
 
@@ -10,6 +7,8 @@
 #define TAIL(X, ...) __VA_ARGS__
 
 #define IS_EMPTY(...) NOT(HEAD(EMPTY_HELPER_ ## __VA_ARGS__))
+#ifndef __VARARGS_H__
+#define __VARARGS_H__
 
 #define LENGTH(...) EVAL(LENGTH_HELPER(0, __VA_ARGS__))
 #define LENGTH_HELPER(COUNT, ...)					\

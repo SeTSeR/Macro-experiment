@@ -1,7 +1,7 @@
+#include "util.h"
+
 #ifndef __ARITH_H__
 #define __ARITH_H__
-
-#include "util.h"
 
 #define INC(X) PRIMITIVE_CAT(INC_, X)
 #define INC_0 1

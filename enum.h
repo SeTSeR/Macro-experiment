@@ -1,7 +1,7 @@
+#include "varargs.h"
+
 #ifndef __ENUM_H__
 #define __ENUM_H__
-
-#include "varargs.h"
 
 #define ELEM(X) X,
 

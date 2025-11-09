@@ -1,14 +1,13 @@
+#include "arith.h"
+#include "control.h"
+#include "util.h"
+
 #ifndef __COMPARE_H__
 #define __COMPARE_H__
-
-#include "arith.h"
-#include "util.h"
 
 #define IS_PAREN(X) CHECK(IS_PAREN_PROBE X)
 #define IS_PAREN_PROBE() PROBE(K)
 
-#define NEQ_FOO(X) X
-#define NEQ_BAR(X) X
 #define NEQ_PRIMITIVE(L, R) IS_PAREN(					\
 									NEQ_ ## L (NEQ_ ## R) (()))
 

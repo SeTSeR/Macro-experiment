@@ -1,8 +1,8 @@
-#ifndef __CONTROL_H__
-#define __CONTROL_H__
-
 #include "arith.h"
 #include "util.h"
+
+#ifndef __CONTROL_H__
+#define __CONTROL_H__
 
 #define IIF(COND) PRIMITIVE_CAT(IIF_, COND)
 #define IIF_0(S_TRUE, ...) __VA_ARGS__
