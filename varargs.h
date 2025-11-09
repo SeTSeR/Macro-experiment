@@ -1,12 +1,6 @@
 #include "control.h"
 #include "eval.h"
 
-#define EMPTY_HELPER_ 0
-
-#define HEAD(X, ...) X
-#define TAIL(X, ...) __VA_ARGS__
-
-#define IS_EMPTY(...) NOT(HEAD(EMPTY_HELPER_ ## __VA_ARGS__))
 #ifndef __VARARGS_H__
 #define __VARARGS_H__
 
