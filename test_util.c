@@ -1,16 +1,21 @@
 #include "util.h"
 
-#include <assert.h>
-#include <stdio.h>
+/* CAT test */
+#define AB 3
 
-void cat_test() {
-  const int CAT(A, B) = 3;
-  assert(AB == 3 && "Macro CAT(A, B) was expanded incorrectly");
+#if (CAT(AB) != AB)
+#error "Macro CAT(A, B) was expanded incorrectly"
+#endif
+
+#undef AB
 
 #define X 1
-  const int CAT(B, X) = 4;
-  assert(B1 == 4 && "Macro CAT(B, X) was expanded incorrectly");
-#undef X
+#define B1 4
 
-  puts("cat_test passed!");
-}
+#if (CAT(B, X) != B1)
+#error "Macro CAT(B, X) was expanded incorrectly"
+#endif
+
+#undef B1
+#undef X
+/* CAT test */

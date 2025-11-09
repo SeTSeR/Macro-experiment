@@ -1,12 +1,37 @@
 #include "varargs.h"
 
-#include <assert.h>
-#include <stdio.h>
+/* IS_EMPTY test begin */
 
-void is_empty_test(void) {
-  puts("is_empty_test passed!");
-}
+#if INV(IS_EMPTY())
+#error "IS_EMPTY() was expanded incorrectly"
+#endif
 
-void length_test(void) {
-  puts("length_test passed!");
-}
+#if IS_EMPTY(X)
+#error "IS_EMPTY(X) was expanded incorrectly"
+#endif
+
+#if IS_EMPTY(X, T)
+#error "IS_EMPTY(X, T) was expanded incorrectly"
+#endif
+
+/* IS_EMPTY test end */
+
+/* LENGTH test begin */
+
+#if LENGTH() != 0
+#error "LENGTH() was expanded incorrectly"
+#endif
+
+#if LENGTH(1) != 1
+#error "LENGTH(1) was expanded incorrectly"
+#endif
+
+#if LENGTH(1, 2) != 2
+#error "LENGTH(1, 2) was expanded incorrectly"
+#endif
+
+#if LENGTH(1, 2, 3) != 3
+#error "LENGTH(1, 2, 3) was expanded incorrectly"
+#endif
+
+/* LENGTH test end */
