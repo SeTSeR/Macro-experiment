@@ -24,9 +24,9 @@
 #define REPEAT(COUNT, F, ...)						\
   WHEN(COUNT)								\
     (									\
-								DOUBLE_DEFER(REPEAT_NEXT)()(DEC(COUNT), F, __VA_ARGS__)	\
-								DOUBLE_DEFER(F)(DEC(COUNT), __VA_ARGS__) \
-								)
+									DOUBLE_DEFER(REPEAT_NEXT)()(DEC(COUNT), F, __VA_ARGS__)	\
+									DOUBLE_DEFER(F)(DEC(COUNT), __VA_ARGS__) \
+									)
 #define REPEAT_NEXT() REPEAT
 
 #define WHILE(COND, F, ...)						\
